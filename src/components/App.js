@@ -8,6 +8,7 @@ import { increment, decrement } from '../actions';
 class App extends Component {
 	render() {
 		const props = this.props;
+		console.log(props);
 		return (
 			<React.Fragment>
 				<div>value: {props.value}</div>
@@ -26,6 +27,6 @@ const mapStateToProps = (state) => ({
 // 	increment: () => dispatch(increment()),
 // 	decrement: () => dispatch(decrement())
 // });
-const mapDispatchProps = { increment, decrement };
+const mapDispatchToProps = { increment, decrement };
 
-export default connect(mapStateToProps, mapDispatchProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
