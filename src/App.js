@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //関数型コンポーネント
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
 			age: 5
 		},
 		{
-			name: 'Noname'
+			name: 'Noname',
+			age: 3
 		}
 	];
 	return (
@@ -32,8 +34,9 @@ const User = (props) => {
 	);
 };
 
-User.defaultProps = {
-	age: 1
+User.propTypes = {
+	name: PropTypes.string,
+	age: PropTypes.number.isRequired
 };
 
 export default App;
